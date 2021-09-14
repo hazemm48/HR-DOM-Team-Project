@@ -13,8 +13,3 @@ project installation guide
 -the project is build on node js server\
 -install the package.js in the project folder\
 -website runs on localhost:8000
-
-
-![web app review](https://github.com/hazemm48/HR-DOM-Team-Project/tree/main/hk%20project/website/pics/clouds.png)
-
-![IMG_20210402_011818_325](https://user-images.githubusercontent.com/75261309/133280027-652e8efd-92fd-45cb-b948-af93c5fb95ed.jpg)
