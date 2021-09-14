@@ -15,4 +15,4 @@ project installation guide
 -website runs on localhost:8000
 
 
-![web app review](/pics/bg.png)
+![web app review](https://github.com/hazemm48/HR-DOM-Team-Project/tree/main/hk%20project/website/pics/bg.png)
