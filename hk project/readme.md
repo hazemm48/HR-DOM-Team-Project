@@ -13,3 +13,6 @@ project installation guide
 -the project is build on node js server\
 -install the package.js in the project folder\
 -website runs on localhost:8000
+
+
+![web app review](/pics/bg.png)
