@@ -106,6 +106,7 @@ async function postData (url) {
     <td><button id="remove" type = "submit"></button></td></tr>`;
     ResultTable.insertAdjacentHTML('afterbegin', htmlTextToAdd);
     document.getElementById('remove').addEventListener('click',deleteRow);
+    document.querySelector('.table').style.visibility='visible';
     }
   }
 
