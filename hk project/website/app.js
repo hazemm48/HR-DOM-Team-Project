@@ -26,28 +26,7 @@ function url (){
   }
 }
 
-async function submitSave (){
-  const request = await fetch('/getWeather');
-  try{
-    const allData = await request.json();
-    const country = document.getElementById('country').value;
-    let data={
-    date:allData.date,
-    temp:allData.temp,
-    hum:allData.hum
-  }
-  console.log(data)
-  let finalData=JSON.stringify(data);
-  if(/\S/.test(country)){
-  localStorage.setItem(country,finalData)
-  location.reload();
-  getData();
-  }
-    }catch(error){
-      console.log("error", error);
-    }
-};
-
+ //function to get data from the api and send to server
 async function postData (url) {
     try{
  const res = await fetch(url);
@@ -72,6 +51,7 @@ async function postData (url) {
    }
  }
 
+  //function to get weather data from the server and send to client side
   const updateUI = async () => {
     const request = await fetch('/getWeather');
     try{
@@ -90,7 +70,31 @@ async function postData (url) {
     }
   }
 
-  async function getData(){
+  //function to save data to localStorage
+  async function submitSave (){
+    const request = await fetch('/getWeather');
+    try{
+      const allData = await request.json();
+      const country = document.getElementById('country').value;
+      let data={
+      date:allData.date,
+      temp:allData.temp,
+      hum:allData.hum
+    }
+    console.log(data)
+    let finalData=JSON.stringify(data);
+    if(/\S/.test(country)){
+    localStorage.setItem(country,finalData)
+    location.reload();
+    getData();
+    }
+      }catch(error){
+        console.log("error", error);
+      }
+  };
+
+  //function to get data from localStorage
+  function getData(){
     let ResultTable=document.querySelector("#tbody");
     ResultTable.innerHTML = '';
     for (let i=0;i<localStorage.length;i++){
@@ -110,8 +114,10 @@ async function postData (url) {
     }
   }
 
+  //function to delete the data from the row and localStorage
  function deleteRow(event) {
    const eventCountry=event.target.closest('tr').firstElementChild.innerText;
+   console.log(eventCountry)
    for (let i=0;i<localStorage.length;i++){
     let country = localStorage.key(i);
     if(country==eventCountry){
