@@ -1,6 +1,6 @@
 This is a live country weather app for hacker rank web camp project
 
-the page is builed dynamically with javascript
+the page is built dynamically with javascript
 
 -you can know any country weather at the meantime\
 -all data are save localy with localstorage function\
@@ -10,6 +10,6 @@ the page is builed dynamically with javascript
 
 project installation guide
 
--the project is build on node js server\
+-the project is built on node js server\
 -install the package.js in the project folder\
 -website runs on localhost:8000
